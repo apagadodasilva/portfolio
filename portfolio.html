@@ -80,16 +80,13 @@
     .card:hover{transform:translateY(-6px);border-color:rgba(200,169,110,.3)}
     .card.honoravel .card-title::after{content:' ✦';color:var(--accent);font-size:.7rem}
 
-    /* ── MEDIA AREA — imagem estática ── */
+    /* media area — imagem */
     .media-area{width:100%;aspect-ratio:4/3;position:relative;overflow:hidden;background:#111;border-radius:8px 8px 0 0}
     .media-area img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
     .card:hover .media-area img{transform:scale(1.04)}
 
-    /* ── MEDIA AREA — vídeo autoplay no card (tipo gif) ── */
-    .media-area video.card-video{
-      width:100%;height:100%;object-fit:cover;display:block;
-      /* autoplay, muted e loop são obrigatórios para funcionar como gif */
-    }
+    /* media area — vídeo autoplay (gif) */
+    .media-area video{width:100%;height:100%;object-fit:cover;display:block}
 
     /* obj badge */
     .obj-badge{width:100%;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;background:linear-gradient(135deg,#1a1815,#2a2018);border-radius:8px 8px 0 0}
@@ -186,7 +183,7 @@
     <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3rem)">Do caderno à tela</h2>
   </div>
 
-  <!-- ══ GRUPO 1 — Esboços & Papel ══ -->
+  <!-- ══ GRUPO 1 ══ -->
   <div class="grupo reveal">
     <div class="grupo-number">1</div>
     <div class="grupo-meta"><span class="grupo-tag">Grupo 01</span></div>
@@ -194,33 +191,24 @@
     <p>A origem de tudo. Rascunhos, estudos de forma, cadernos cheios de ideias. Aqui vivem as primeiras versões — imperfeitas e honestas.</p>
     <div class="cards-grid">
 
-      <!-- Liris.jpg -->
       <div class="card" onclick="openImgPopup('png/Liris.jpg')">
-        <div class="media-area">
-          <img src="png/Liris.jpg" alt="Estudo de personagem" loading="lazy">
-        </div>
+        <div class="media-area"><img src="png/Liris.jpg" alt="Estudo de personagem" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Estudo de personagem</p>
           <p class="card-desc">Rascunhos de anatomia e expressões</p>
         </div>
       </div>
 
-      <!-- Franklyn.jpg -->
       <div class="card" onclick="openImgPopup('png/Franklyn.jpg')">
-        <div class="media-area">
-          <img src="png/Franklyn.jpg" alt="Páginas do caderno" loading="lazy">
-        </div>
+        <div class="media-area"><img src="png/Franklyn.jpg" alt="Páginas do caderno" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Páginas do caderno</p>
           <p class="card-desc">Sketches do dia a dia</p>
         </div>
       </div>
 
-      <!-- Namaro.jpg -->
       <div class="card" onclick="openImgPopup('png/Namaro.jpg')">
-        <div class="media-area">
-          <img src="png/Namaro.jpg" alt="Páginas do caderno" loading="lazy">
-        </div>
+        <div class="media-area"><img src="png/Namaro.jpg" alt="Páginas do caderno" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Páginas do caderno</p>
           <p class="card-desc">Sketches do dia a dia</p>
@@ -231,7 +219,7 @@
   </div>
   <div class="secao-divider"></div>
 
-  <!-- ══ GRUPO 2 — O Processo ══ -->
+  <!-- ══ GRUPO 2 ══ -->
   <div class="grupo reveal">
     <div class="grupo-number">2</div>
     <div class="grupo-meta"><span class="grupo-tag">Grupo 02</span></div>
@@ -239,22 +227,16 @@
     <p>Do esboço ao digital. Aqui mostro como um trabalho nasce — linhas de construção, camadas e escolhas de cor.</p>
     <div class="cards-grid">
 
-      <!-- Portfolio designer_20260421201136.png -->
       <div class="card" onclick="openImgPopup('png/Portfolio designer_20260421201136.png')">
-        <div class="media-area">
-          <img src="png/Portfolio designer_20260421201136.png" alt="Referência de trabalho" loading="lazy">
-        </div>
+        <div class="media-area"><img src="png/Portfolio designer_20260421201136.png" alt="Referência de trabalho" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Referência de trabalho</p>
           <p class="card-desc">Da linha ao digital</p>
         </div>
       </div>
 
-      <!-- Portfolio.png -->
       <div class="card" onclick="openImgPopup('png/Portfolio.png')">
-        <div class="media-area">
-          <img src="png/Portfolio.png" alt="Trabalho finalizado no celular" loading="lazy">
-        </div>
+        <div class="media-area"><img src="png/Portfolio.png" alt="Trabalho finalizado no celular" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Trabalho finalizado no celular</p>
           <p class="card-desc">Trabalhos finalizados no celular</p>
@@ -265,7 +247,7 @@
   </div>
   <div class="secao-divider"></div>
 
-  <!-- ══ GRUPO 3 — Animação & Rough ══ -->
+  <!-- ══ GRUPO 3 ══ -->
   <div class="grupo reveal">
     <div class="grupo-number">3</div>
     <div class="grupo-meta"><span class="grupo-tag">Grupo 03</span></div>
@@ -273,34 +255,47 @@
     <p>Movimento. Estudos de animação, frames-chave e os roughs que já mostram a alma do movimento.</p>
     <div class="cards-grid">
 
-      <!-- animações/BG/0000.png -->
+      <!-- card 1: BG -->
       <div class="card" onclick="openImgPopup('animações/BG/0000.png')">
-        <div class="media-area">
-          <img src="animações/BG/0000.png" alt="Layer Background" loading="lazy">
-        </div>
+        <div class="media-area"><img src="animações/BG/0000.png" alt="Layer Background" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Separando layer no rough</p>
           <p class="card-desc">Layer BackGround</p>
         </div>
       </div>
 
-      <!-- animações/princ/0000.png -->
+      <!-- card 2: princ -->
       <div class="card" onclick="openImgPopup('animações/princ/0000.png')">
-        <div class="media-area">
-          <img src="animações/princ/0000.png" alt="Layer Principais" loading="lazy">
-        </div>
+        <div class="media-area"><img src="animações/princ/0000.png" alt="Layer Principais" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Separando layer no Rough</p>
           <p class="card-desc">Layer de principais</p>
         </div>
       </div>
 
-      <!-- MP4/Campanha Port.mp4 — autoplay no card -->
+      <!-- card 3: Low — NOVO -->
+      <div class="card" onclick="openImgPopup('animações/Low/0000.png')">
+        <div class="media-area"><img src="animações/Low/0000.png" alt="Layer Low" loading="lazy"></div>
+        <div class="card-info">
+          <p class="card-title">Separando layer no Rough</p>
+          <p class="card-desc">Layer de principais</p>
+        </div>
+      </div>
+
+      <!-- card 4: Fontes — NOVO -->
+      <div class="card" onclick="openImgPopup('animações/Fontes/0000.png')">
+        <div class="media-area"><img src="animações/Fontes/0000.png" alt="Layer Fontes" loading="lazy"></div>
+        <div class="card-info">
+          <p class="card-title">Separando layer no Rough</p>
+          <p class="card-desc">Layer de principais</p>
+        </div>
+      </div>
+
+      <!-- card 5: Campanha Port.mp4 — autoplay -->
       <div class="card" onclick="openVidPopup('MP4/Campanha Port.mp4')">
         <div class="media-area">
-          <video class="card-video" src="MP4/Campanha Port.mp4"
-            autoplay muted loop playsinline
-            style="width:100%;height:100%;object-fit:cover;display:block">
+          <video autoplay muted loop playsinline>
+            <source src="MP4/Campanha Port.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card-info">
@@ -336,56 +331,47 @@
         </div>
       </div>
 
-      <!-- draws/binyah.jpg -->
+      <!-- binyah.jpg -->
       <div class="card honoravel" onclick="openImgPopup('draws/binyah.jpg')">
-        <div class="media-area">
-          <img src="draws/binyah.jpg" alt="Desenho de quadrinho" loading="lazy">
-        </div>
+        <div class="media-area"><img src="draws/binyah.jpg" alt="Desenho de quadrinho" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Binyah</p>
           <p class="card-desc">Desenho de quadrinho como hobby</p>
         </div>
       </div>
 
-      <!-- draws/garotaazul.png -->
+      <!-- garotaazul.png -->
       <div class="card honoravel" onclick="openImgPopup('draws/garotaazul.png')">
-        <div class="media-area">
-          <img src="draws/garotaazul.png" alt="Desenho digital não finalizado" loading="lazy">
-        </div>
+        <div class="media-area"><img src="draws/garotaazul.png" alt="Desenho digital não finalizado" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Garota Azul</p>
           <p class="card-desc">Desenho digital não finalizado</p>
         </div>
       </div>
 
-      <!-- draws/Simon.png -->
+      <!-- Simon.png -->
       <div class="card honoravel" onclick="openImgPopup('draws/Simon.png')">
-        <div class="media-area">
-          <img src="draws/Simon.png" alt="Página do quadrinho" loading="lazy">
-        </div>
+        <div class="media-area"><img src="draws/Simon.png" alt="Página do quadrinho" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Simon</p>
           <p class="card-desc">Outra página do quadrinho como hobby</p>
         </div>
       </div>
 
-      <!-- draws/Wine.png -->
+      <!-- Wine.png -->
       <div class="card honoravel" onclick="openImgPopup('draws/Wine.png')">
-        <div class="media-area">
-          <img src="draws/Wine.png" alt="Trabalho teste de designer" loading="lazy">
-        </div>
+        <div class="media-area"><img src="draws/Wine.png" alt="Trabalho teste de designer" loading="lazy"></div>
         <div class="card-info">
           <p class="card-title">Wine</p>
           <p class="card-desc">Trabalho teste de designer esquecido</p>
         </div>
       </div>
 
-      <!-- draws/hk.mp4 — autoplay no card -->
-      <div class="card honoravel" onclick="openVidPopup('draws/hk.mp4')">
+      <!-- hollow.mp4 — autoplay -->
+      <div class="card honoravel" onclick="openVidPopup('draws/hollow.mp4')">
         <div class="media-area">
-          <video class="card-video" src="draws/hk.mp4"
-            autoplay muted loop playsinline
-            style="width:100%;height:100%;object-fit:cover;display:block">
+          <video autoplay muted loop playsinline>
+            <source src="draws/hollow.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card-info">
@@ -394,12 +380,11 @@
         </div>
       </div>
 
-      <!-- draws/player-traco.mp4 — autoplay no card -->
+      <!-- player-traco.mp4 — autoplay -->
       <div class="card honoravel" onclick="openVidPopup('draws/player-traco.mp4')">
         <div class="media-area">
-          <video class="card-video" src="draws/player-traco.mp4"
-            autoplay muted loop playsinline
-            style="width:100%;height:100%;object-fit:cover;display:block">
+          <video autoplay muted loop playsinline>
+            <source src="draws/player-traco.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card-info">
@@ -408,12 +393,11 @@
         </div>
       </div>
 
-      <!-- draws/player-body.mp4 — autoplay no card -->
-      <div class="card honoravel" onclick="openVidPopup('draws/player-body.mp4')">
+      <!-- body.mp4 — autoplay -->
+      <div class="card honoravel" onclick="openVidPopup('draws/body.mp4')">
         <div class="media-area">
-          <video class="card-video" src="draws/player-body.mp4"
-            autoplay muted loop playsinline
-            style="width:100%;height:100%;object-fit:cover;display:block">
+          <video autoplay muted loop playsinline>
+            <source src="draws/body.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card-info">
@@ -422,12 +406,11 @@
         </div>
       </div>
 
-      <!-- draws/player-manto.mp4 — autoplay no card -->
-      <div class="card honoravel" onclick="openVidPopup('draws/player-manto.mp4')">
+      <!-- manto.mp4 — autoplay -->
+      <div class="card honoravel" onclick="openVidPopup('draws/manto.mp4')">
         <div class="media-area">
-          <video class="card-video" src="draws/player-manto.mp4"
-            autoplay muted loop playsinline
-            style="width:100%;height:100%;object-fit:cover;display:block">
+          <video autoplay muted loop playsinline>
+            <source src="draws/manto.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card-info">
@@ -436,12 +419,11 @@
         </div>
       </div>
 
-      <!-- draws/silverboyportfólio.mp4 — autoplay no card -->
-      <div class="card honoravel" onclick="openVidPopup('draws/silverboyportfólio.mp4')">
+      <!-- silverboy.mp4 — autoplay -->
+      <div class="card honoravel" onclick="openVidPopup('draws/silverboy.mp4')">
         <div class="media-area">
-          <video class="card-video" src="draws/silverboyportfólio.mp4"
-            autoplay muted loop playsinline
-            style="width:100%;height:100%;object-fit:cover;display:block">
+          <video autoplay muted loop playsinline>
+            <source src="draws/silverboy.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card-info">
@@ -460,7 +442,6 @@
 
 <!-- ══════════ POPUPS ══════════ -->
 
-<!-- Popup: Imagem -->
 <div class="popup-overlay" id="imgPopup">
   <div class="popup-box">
     <div class="popup-topbar">
@@ -474,7 +455,6 @@
   </div>
 </div>
 
-<!-- Popup: Vídeo -->
 <div class="popup-overlay" id="vidPopup">
   <div class="popup-box">
     <div class="popup-topbar">
@@ -487,7 +467,6 @@
   </div>
 </div>
 
-<!-- Popup: OBJ 3D -->
 <div class="popup-overlay" id="objPopup">
   <div class="popup-box">
     <div class="popup-topbar">
@@ -505,9 +484,9 @@
 </div>
 
 <script>
-/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    FECHAR POPUPS
-═══════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 function closePopup(id) {
   document.getElementById(id).classList.remove('active');
   if (id === 'vidPopup') {
@@ -516,11 +495,9 @@ function closePopup(id) {
   }
   if (id === 'objPopup') cleanupThree();
 }
-
 document.getElementById('imgClose').onclick = () => closePopup('imgPopup');
 document.getElementById('vidClose').onclick = () => closePopup('vidPopup');
 document.getElementById('objClose').onclick = () => closePopup('objPopup');
-
 document.querySelectorAll('.popup-overlay').forEach(o => {
   o.addEventListener('click', e => { if (e.target === o) closePopup(o.id); });
 });
@@ -529,9 +506,9 @@ document.addEventListener('keydown', e => {
     document.querySelectorAll('.popup-overlay.active').forEach(o => closePopup(o.id));
 });
 
-/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    POPUP IMAGEM — zoom + pan
-═══════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 const iv = document.getElementById('imgViewport');
 let IS = { scale:1, x:0, y:0, dr:false, lx:0, ly:0 };
 let TP = {};
@@ -540,89 +517,79 @@ function applyT() {
   document.getElementById('popupImg').style.transform =
     `translate(${IS.x}px,${IS.y}px) scale(${IS.scale})`;
 }
-
 function centerImg() {
   const img = document.getElementById('popupImg');
   const vw = iv.clientWidth, vh = iv.clientHeight;
-  const fit = Math.min(vw / img.naturalWidth, vh / img.naturalHeight, 1);
+  const fit = Math.min(vw/img.naturalWidth, vh/img.naturalHeight, 1);
   IS = { scale:fit, x:(vw-img.naturalWidth*fit)/2, y:(vh-img.naturalHeight*fit)/2, dr:false, lx:0, ly:0 };
   applyT();
 }
-
 function openImgPopup(src) {
-  const img  = document.getElementById('popupImg');
+  const img = document.getElementById('popupImg');
   const hint = document.getElementById('zoomHint');
   img.src = src;
   hint.style.opacity = '1';
-  img.onload = () => { centerImg(); setTimeout(() => hint.style.opacity = '0', 3000); };
+  img.onload = () => { centerImg(); setTimeout(() => hint.style.opacity='0', 3000); };
   document.getElementById('imgPopup').classList.add('active');
 }
 
-/* wheel zoom */
 iv.addEventListener('wheel', e => {
   e.preventDefault();
-  const d = e.deltaY > 0 ? .85 : 1.18;
-  const ns = Math.min(Math.max(IS.scale * d, .05), 20);
+  const d = e.deltaY>0 ? .85 : 1.18;
+  const ns = Math.min(Math.max(IS.scale*d, .05), 20);
   const r = iv.getBoundingClientRect();
-  const cx = e.clientX - r.left, cy = e.clientY - r.top;
-  IS.x = cx - (cx - IS.x) * (ns / IS.scale);
-  IS.y = cy - (cy - IS.y) * (ns / IS.scale);
-  IS.scale = ns; applyT();
-}, { passive:false });
-
-/* mouse pan */
-iv.addEventListener('mousedown',  e => { IS.dr=true; IS.lx=e.clientX; IS.ly=e.clientY; });
-window.addEventListener('mouseup',   () => IS.dr = false);
-window.addEventListener('mousemove', e => {
-  if (!IS.dr) return;
-  IS.x += e.clientX - IS.lx; IS.y += e.clientY - IS.ly;
-  IS.lx = e.clientX; IS.ly = e.clientY; applyT();
-});
-
-/* touch pan + pinch */
-iv.addEventListener('touchstart', e => {
-  [...e.changedTouches].forEach(t => TP[t.identifier] = {x:t.clientX, y:t.clientY});
-}, {passive:true});
-
-iv.addEventListener('touchmove', e => {
-  e.preventDefault();
-  if (e.touches.length === 1) {
-    const t = e.touches[0], p = TP[t.identifier] || {x:t.clientX,y:t.clientY};
-    IS.x += t.clientX - p.x; IS.y += t.clientY - p.y;
-    TP[t.identifier] = {x:t.clientX, y:t.clientY}; applyT();
-  } else if (e.touches.length === 2) {
-    const [t1,t2] = [e.touches[0],e.touches[1]];
-    const p1 = TP[t1.identifier]||{x:t1.clientX,y:t1.clientY};
-    const p2 = TP[t2.identifier]||{x:t2.clientX,y:t2.clientY};
-    const pd = Math.hypot(p1.x-p2.x,p1.y-p2.y);
-    const nd = Math.hypot(t1.clientX-t2.clientX,t1.clientY-t2.clientY);
-    const ns = Math.min(Math.max(IS.scale*(nd/pd),.05),20);
-    const r  = iv.getBoundingClientRect();
-    const cx = (t1.clientX+t2.clientX)/2-r.left, cy=(t1.clientY+t2.clientY)/2-r.top;
-    IS.x = cx-(cx-IS.x)*(ns/IS.scale); IS.y = cy-(cy-IS.y)*(ns/IS.scale);
-    IS.scale = ns;
-    TP[t1.identifier]={x:t1.clientX,y:t1.clientY};
-    TP[t2.identifier]={x:t2.clientX,y:t2.clientY};
-    applyT();
-  }
+  const cx=e.clientX-r.left, cy=e.clientY-r.top;
+  IS.x=cx-(cx-IS.x)*(ns/IS.scale); IS.y=cy-(cy-IS.y)*(ns/IS.scale);
+  IS.scale=ns; applyT();
 }, {passive:false});
 
+iv.addEventListener('mousedown', e => { IS.dr=true; IS.lx=e.clientX; IS.ly=e.clientY; });
+window.addEventListener('mouseup', () => IS.dr=false);
+window.addEventListener('mousemove', e => {
+  if (!IS.dr) return;
+  IS.x+=e.clientX-IS.lx; IS.y+=e.clientY-IS.ly;
+  IS.lx=e.clientX; IS.ly=e.clientY; applyT();
+});
+
+iv.addEventListener('touchstart', e => {
+  [...e.changedTouches].forEach(t => TP[t.identifier]={x:t.clientX,y:t.clientY});
+},{passive:true});
+iv.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if (e.touches.length===1) {
+    const t=e.touches[0], p=TP[t.identifier]||{x:t.clientX,y:t.clientY};
+    IS.x+=t.clientX-p.x; IS.y+=t.clientY-p.y;
+    TP[t.identifier]={x:t.clientX,y:t.clientY}; applyT();
+  } else if (e.touches.length===2) {
+    const [t1,t2]=[e.touches[0],e.touches[1]];
+    const p1=TP[t1.identifier]||{x:t1.clientX,y:t1.clientY};
+    const p2=TP[t2.identifier]||{x:t2.clientX,y:t2.clientY};
+    const pd=Math.hypot(p1.x-p2.x,p1.y-p2.y);
+    const nd=Math.hypot(t1.clientX-t2.clientX,t1.clientY-t2.clientY);
+    const ns=Math.min(Math.max(IS.scale*(nd/pd),.05),20);
+    const r=iv.getBoundingClientRect();
+    const cx=(t1.clientX+t2.clientX)/2-r.left, cy=(t1.clientY+t2.clientY)/2-r.top;
+    IS.x=cx-(cx-IS.x)*(ns/IS.scale); IS.y=cy-(cy-IS.y)*(ns/IS.scale); IS.scale=ns;
+    TP[t1.identifier]={x:t1.clientX,y:t1.clientY};
+    TP[t2.identifier]={x:t2.clientX,y:t2.clientY}; applyT();
+  }
+},{passive:false});
 iv.addEventListener('touchend', e => {
   [...e.changedTouches].forEach(t => delete TP[t.identifier]);
-}, {passive:true});
+},{passive:true});
 
-/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    POPUP VÍDEO
-═══════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 function openVidPopup(src) {
   const v = document.getElementById('popupVid');
   v.src = src; v.play();
   document.getElementById('vidPopup').classList.add('active');
 }
 
-/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    POPUP OBJ — Three.js
-═══════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 let three = null;
 
 function cleanupThree() {
@@ -640,124 +607,117 @@ function loadAndOpenObj(src) {
   document.getElementById('objPopup').classList.add('active');
   const hint = document.getElementById('objViewport').querySelector('.gizmo-hint');
   hint.textContent = 'Carregando modelo...';
-
   fetch(src)
-    .then(r => { if (!r.ok) throw new Error('Arquivo não encontrado: ' + src); return r.text(); })
+    .then(r => { if (!r.ok) throw new Error('Arquivo não encontrado: '+src); return r.text(); })
     .then(text => {
-      hint.innerHTML = `<span>🖱 arrastar → orbitar</span><span>scroll → zoom</span><span>btn dir. → mover</span>`;
+      hint.innerHTML=`<span>🖱 arrastar → orbitar</span><span>scroll → zoom</span><span>btn dir. → mover</span>`;
       setTimeout(() => buildThree(text), 60);
     })
-    .catch(err => { hint.textContent = '⚠ ' + err.message; });
+    .catch(err => { hint.textContent='⚠ '+err.message; });
 }
 
 function buildThree(objText) {
-  const vp = document.getElementById('objViewport');
-  const W = vp.clientWidth, H = vp.clientHeight;
-
-  const scene    = new THREE.Scene();
-  scene.background = new THREE.Color(0x0f0e0b);
-  const camera   = new THREE.PerspectiveCamera(45, W/H, 0.001, 10000);
-  camera.position.set(0, 1.5, 4);
-  const renderer = new THREE.WebGLRenderer({ antialias:true });
-  renderer.setSize(W, H);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  const vp=document.getElementById('objViewport');
+  const W=vp.clientWidth, H=vp.clientHeight;
+  const scene=new THREE.Scene();
+  scene.background=new THREE.Color(0x0f0e0b);
+  const camera=new THREE.PerspectiveCamera(45,W/H,0.001,10000);
+  camera.position.set(0,1.5,4);
+  const renderer=new THREE.WebGLRenderer({antialias:true});
+  renderer.setSize(W,H); renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
   vp.insertBefore(renderer.domElement, vp.querySelector('.gizmo-hint'));
 
-  scene.add(new THREE.AmbientLight(0xfff8f0, .7));
-  const dl = new THREE.DirectionalLight(0xffeedd, 1.3);
-  dl.position.set(3,6,4); scene.add(dl);
-  const fl = new THREE.DirectionalLight(0xc8a96e, .3);
-  fl.position.set(-3,-1,-2); scene.add(fl);
+  scene.add(new THREE.AmbientLight(0xfff8f0,.7));
+  const dl=new THREE.DirectionalLight(0xffeedd,1.3); dl.position.set(3,6,4); scene.add(dl);
+  const fl=new THREE.DirectionalLight(0xc8a96e,.3); fl.position.set(-3,-1,-2); scene.add(fl);
   scene.add(new THREE.GridHelper(20,30,0x3a3530,0x2a2520));
 
-  const geo = parseOBJ(objText);
-  const mat = new THREE.MeshStandardMaterial({ color:0xc8a96e, roughness:.65, metalness:.1, side:THREE.DoubleSide });
-  const mesh = new THREE.Mesh(geo, mat);
-
+  const geo=parseOBJ(objText);
+  const mat=new THREE.MeshStandardMaterial({color:0xc8a96e,roughness:.65,metalness:.1,side:THREE.DoubleSide});
+  const mesh=new THREE.Mesh(geo,mat);
   geo.computeBoundingBox();
-  const box = geo.boundingBox;
-  const c = new THREE.Vector3(); box.getCenter(c);
-  const sz = new THREE.Vector3(); box.getSize(sz);
-  const s = 3 / Math.max(sz.x, sz.y, sz.z, 0.001);
-  mesh.scale.setScalar(s);
-  mesh.position.set(-c.x*s, -c.y*s+sz.y*s*.5, -c.z*s);
+  const box=geo.boundingBox;
+  const c=new THREE.Vector3(); box.getCenter(c);
+  const sz=new THREE.Vector3(); box.getSize(sz);
+  const s=3/Math.max(sz.x,sz.y,sz.z,0.001);
+  mesh.scale.setScalar(s); mesh.position.set(-c.x*s,-c.y*s+sz.y*s*.5,-c.z*s);
   scene.add(mesh);
 
-  let orb = { theta:.4, phi:1.1, r:4, px:0, py:0, drag:false, rdrag:false, lx:0, ly:0 };
-  function cam() {
+  let orb={theta:.4,phi:1.1,r:4,px:0,py:0,drag:false,rdrag:false,lx:0,ly:0};
+  function cam(){
     camera.position.set(
-      orb.px + orb.r*Math.sin(orb.phi)*Math.sin(orb.theta),
-      orb.py + orb.r*Math.cos(orb.phi),
-      orb.r  * Math.sin(orb.phi)*Math.cos(orb.theta)
+      orb.px+orb.r*Math.sin(orb.phi)*Math.sin(orb.theta),
+      orb.py+orb.r*Math.cos(orb.phi),
+      orb.r*Math.sin(orb.phi)*Math.cos(orb.theta)
     );
-    camera.lookAt(orb.px, orb.py, 0);
+    camera.lookAt(orb.px,orb.py,0);
   }
   cam();
-
-  const cv = renderer.domElement;
-  const md = e => { orb.drag=e.button===0; orb.rdrag=e.button===2; orb.lx=e.clientX; orb.ly=e.clientY; };
-  const mu = () => { orb.drag=false; orb.rdrag=false; };
-  const mm = e => {
-    if (!orb.drag && !orb.rdrag) return;
-    const dx=e.clientX-orb.lx, dy=e.clientY-orb.ly;
-    orb.lx=e.clientX; orb.ly=e.clientY;
-    if (orb.rdrag) { orb.px-=dx*.005; orb.py+=dy*.005; }
-    else { orb.theta-=dx*.012; orb.phi=Math.max(.05,Math.min(Math.PI-.05,orb.phi+dy*.012)); }
+  const cv=renderer.domElement;
+  const md=e=>{orb.drag=e.button===0;orb.rdrag=e.button===2;orb.lx=e.clientX;orb.ly=e.clientY;};
+  const mu=()=>{orb.drag=false;orb.rdrag=false;};
+  const mm=e=>{
+    if(!orb.drag&&!orb.rdrag)return;
+    const dx=e.clientX-orb.lx,dy=e.clientY-orb.ly;
+    orb.lx=e.clientX;orb.ly=e.clientY;
+    if(orb.rdrag){orb.px-=dx*.005;orb.py+=dy*.005;}
+    else{orb.theta-=dx*.012;orb.phi=Math.max(.05,Math.min(Math.PI-.05,orb.phi+dy*.012));}
     cam();
   };
-  cv.addEventListener('mousedown', md);
-  cv.addEventListener('contextmenu', e=>e.preventDefault());
-  window.addEventListener('mouseup', mu);
-  window.addEventListener('mousemove', mm);
-  cv.addEventListener('wheel', e => {
+  cv.addEventListener('mousedown',md);
+  cv.addEventListener('contextmenu',e=>e.preventDefault());
+  window.addEventListener('mouseup',mu);
+  window.addEventListener('mousemove',mm);
+  cv.addEventListener('wheel',e=>{
     e.preventDefault();
-    orb.r = Math.max(.2, Math.min(50, orb.r+e.deltaY*.015));
-    cam();
-  }, {passive:false});
+    orb.r=Math.max(.2,Math.min(50,orb.r+e.deltaY*.015));cam();
+  },{passive:false});
 
-  let tp2 = {};
-  cv.addEventListener('touchstart', e=>{
+  let tp2={};
+  cv.addEventListener('touchstart',e=>{
     [...e.touches].forEach(t=>tp2[t.identifier]={x:t.clientX,y:t.clientY});
   },{passive:true});
-  cv.addEventListener('touchmove', e=>{
+  cv.addEventListener('touchmove',e=>{
     e.preventDefault();
-    if (e.touches.length===1) {
+    if(e.touches.length===1){
       const t=e.touches[0],p=tp2[t.identifier]||{x:t.clientX,y:t.clientY};
       orb.theta-=(t.clientX-p.x)*.014;
       orb.phi=Math.max(.05,Math.min(Math.PI-.05,orb.phi+(t.clientY-p.y)*.014));
-      tp2[t.identifier]={x:t.clientX,y:t.clientY}; cam();
-    } else if (e.touches.length===2) {
-      const [t1,t2]=[e.touches[0],e.touches[1]];
+      tp2[t.identifier]={x:t.clientX,y:t.clientY};cam();
+    }else if(e.touches.length===2){
+      const[t1,t2]=[e.touches[0],e.touches[1]];
       const p1=tp2[t1.identifier]||{x:t1.clientX,y:t1.clientY};
       const p2=tp2[t2.identifier]||{x:t2.clientX,y:t2.clientY};
       const pd=Math.hypot(p1.x-p2.x,p1.y-p2.y);
       const nd=Math.hypot(t1.clientX-t2.clientX,t1.clientY-t2.clientY);
       orb.r=Math.max(.2,Math.min(50,orb.r*(pd/nd)));
       tp2[t1.identifier]={x:t1.clientX,y:t1.clientY};
-      tp2[t2.identifier]={x:t2.clientX,y:t2.clientY}; cam();
+      tp2[t2.identifier]={x:t2.clientX,y:t2.clientY};cam();
     }
   },{passive:false});
-  cv.addEventListener('touchend',e=>{[...e.changedTouches].forEach(t=>delete tp2[t.identifier]);},{passive:true});
+  cv.addEventListener('touchend',e=>{
+    [...e.changedTouches].forEach(t=>delete tp2[t.identifier]);
+  },{passive:true});
 
-  const ro = new ResizeObserver(() => {
-    const nw=vp.clientWidth, nh=vp.clientHeight;
-    renderer.setSize(nw,nh); camera.aspect=nw/nh; camera.updateProjectionMatrix();
+  const ro=new ResizeObserver(()=>{
+    const nw=vp.clientWidth,nh=vp.clientHeight;
+    renderer.setSize(nw,nh);camera.aspect=nw/nh;camera.updateProjectionMatrix();
   });
   ro.observe(vp);
 
-  function loop() { three.raf=requestAnimationFrame(loop); renderer.render(scene,camera); }
-  three = { renderer, raf:null, cleanup:()=>{ window.removeEventListener('mouseup',mu); window.removeEventListener('mousemove',mm); ro.disconnect(); } };
+  function loop(){three.raf=requestAnimationFrame(loop);renderer.render(scene,camera);}
+  three={renderer,raf:null,cleanup:()=>{window.removeEventListener('mouseup',mu);window.removeEventListener('mousemove',mm);ro.disconnect();}};
   loop();
 }
 
-function parseOBJ(text) {
+function parseOBJ(text){
   const vp=[],vt=[],vn=[],pos=[],uv=[],norm=[];
-  for (const raw of text.split('\n')) {
+  for(const raw of text.split('\n')){
     const p=raw.trim().split(/\s+/);
-    if (p[0]==='v')       vp.push(+p[1],+p[2],+p[3]);
-    else if (p[0]==='vt') vt.push(+p[1],+p[2]);
-    else if (p[0]==='vn') vn.push(+p[1],+p[2],+p[3]);
-    else if (p[0]==='f') {
+    if(p[0]==='v') vp.push(+p[1],+p[2],+p[3]);
+    else if(p[0]==='vt') vt.push(+p[1],+p[2]);
+    else if(p[0]==='vn') vn.push(+p[1],+p[2],+p[3]);
+    else if(p[0]==='f'){
       const face=p.slice(1).map(tok=>{
         const s=tok.split('/');
         return{v:(+s[0]||1)-1,t:(+s[1]||1)-1,n:(+s[2]||1)-1};
@@ -779,9 +739,9 @@ function parseOBJ(text) {
   return geo;
 }
 
-/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    TÍTULO ANIMADO
-═══════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 document.querySelectorAll('#heroTitle .line1,#heroTitle .line2').forEach((line,li)=>{
   const txt=line.textContent; line.textContent=''; line.style.display='inline';
   [...txt].forEach((c,i)=>{
@@ -791,9 +751,9 @@ document.querySelectorAll('#heroTitle .line1,#heroTitle .line2').forEach((line,l
   });
 });
 
-/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    SCROLL REVEAL
-═══════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
 },{threshold:.1});
